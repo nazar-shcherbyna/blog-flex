@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+a, button {
+    transition: all .3s ease-in-out 
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font: 300 1.6rem 'Open Sans', sans-serif;
+    color: #1d1d1d;
+    background-color: #e2e7ec;
+    line-height: 1.4;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;  
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex__item {
+    width: 360px;
+    height: 540px;
+    margin: 10px;
+}
+
+.flex__item--lg {
+    width: 740px;
+}
+
+.post {
+    height: 540px;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .1);
+    transition: all .3s ease-in-out;
+}
+
+.post--lg {
+
+}
+
+.post:hover,
+.post:focus,
+.post:active {
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .3);
+}
+
+.post__link {
+    display: block;
+    text-decoration: none;
+}
+
+.post__author {
+    display: block;
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    left: 30px;
+    bottom: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.post__author img,
+.post__img img {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform .3s ease-in-out;
+}
+
+.post__author:hover img {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.post__img {
+    padding-top: 70%;
+    position: relative;
+    overflow: hidden;
+}
+
+.post--lg .post__img {
+    padding-top: 540px;
+}
+
+.post__img {
+    padding-top: 70%;
+    position: relative;
+    overflow: hidden;
+}
+
+.post--lg .post__img:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0) 80%);
+    transition: transform .3s ease-in-out;
+    transform: scale(1.5);
+}
+
+.post--lg:hover .post__img:after,
+.post--lg:focus .post__img:after,
+.post--lg:active .post__img:after {
+    transform: scale(1);
+}
+
+.post__data {
+    padding: 30px;
+    text-transform: uppercase;
+}
+
+.post--lg .post__data {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.post__time {
+    color: #818181;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.post__title {
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #1d1d1d;
+    margin-top: 15px;
+    max-height: 12.5rem;
+    overflow: hidden;
+}
+
+.post--lg .post__title {
+    color: #fff;
+    font-size: 3rem;
+    max-width: 70%;
+}
